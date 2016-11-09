@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Words</title>
+
+		<style type="text/css">
+			body {
+				background: #B7E1CE;]
+				height: 100%
+				width: 100%;
+			}
+			.text-display {
+				text-align: center;
+				font-size: 32px;
+			}
+		</style>
+
+	</head>
+	<body onclick="displayAnimal()">
+		<div class="text-display">
+			<p >Here's an animal:</p>
+			<p id="animal-name"></p>
+		</div>
+
+		<script type="text/javascript">
+			var animalArray = ["cat", "dog", "rabbit", "fish", "horse", "cow", "llama", "porcupine", "fox", "parrot", "zebra", "elephant"];
+
+			// var count = 0;
+
+			function displayAnimal() {
+
+				// if(count < animalArray.length) {
+				// 	var animal = animalArray[count];
+				// 	document.getElementById('animal-name');
+				// }
+
+				var randomAnimal = animalArray[Math.floor(Math.random() * animalArray.length)];
+				document.getElementById('animal-name').innerHTML = randomAnimal;
+			}
+
+			// count += 1;
+
+
+			displayAnimal();
+		</script>
+	</body>
+
+</html>
+
+
+
