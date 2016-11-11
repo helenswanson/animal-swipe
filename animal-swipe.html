@@ -18,6 +18,12 @@
 				font-size: 32px;
 				margin: 100px;
 			}
+			.text-display-2 {
+				text-align: center;
+				font-size: 32px;
+				margin: 100px;
+				background: white;
+			}
 		</style>
 
 	</head>
@@ -27,8 +33,8 @@
 				<p>Here's an animal:</p>
 				<p id="animal-name"></p>
 			</div>
-			<div class="text-display">
-
+			<div class="text-display-2">
+				<div id="test" class="box">Swipe me</div>
 			</div>
 
 		</div>
@@ -38,6 +44,7 @@
 		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 
 		<script type="text/javascript">
+
 			var animalArray = [
 				"aardvark",
 				"alligator",
@@ -181,6 +188,17 @@
 			}
 
 			displayAnimal();
+
+
+			$("#test").swipe( {
+				//Generic swipe handler for all directions
+				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+					$(this).text("You swiped " + direction );  
+				},
+				//Default is 75px, set to 0 for demo so any distance triggers swipe
+				threshold:0
+			});
+
 		</script>
 	</body>
 
