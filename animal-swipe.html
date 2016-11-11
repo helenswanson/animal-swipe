@@ -16,7 +16,7 @@
 			.text-display {
 				text-align: center;
 				font-size: 32px;
-				width: ;
+				margin: 100px;
 			}
 		</style>
 
@@ -27,12 +27,15 @@
 				<p>Here's an animal:</p>
 				<p id="animal-name"></p>
 			</div>
+			<div class="text-display">
+
+			</div>
+
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-		<script src="jquery.wipetouch.js"></script>
-		<script src="common.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 
 		<script type="text/javascript">
 			var animalArray = [
@@ -173,11 +176,6 @@
 			];
 
 			function displayAnimal() {
-
-				
-
-
-
 				var randomAnimal = animalArray[Math.floor(Math.random() * animalArray.length)];
 				document.getElementById('animal-name').innerHTML = randomAnimal;
 			}
