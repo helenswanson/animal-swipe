@@ -13,28 +13,32 @@
 			.content {
 				width: 100%;
 			}
+			.top {
+				margin-top: 100px;
+
+			}
 			.text-display {
 				text-align: center;
 				font-size: 32px;
-				margin: 100px;
 			}
-			.text-display-2 {
-				text-align: center;
-				font-size: 32px;
-				margin: 100px;
+			#animal-name {
+				padding-bottom: 100px;
+			}
+			#swipe-me {
+				padding: 100px;
 				background: white;
 			}
 		</style>
 
 	</head>
-	<body onclick="displayAnimal()">
+	<body>
 		<div class="content">
-			<div class="text-display">
+			<div class="text-display top" onClick="displayAnimal()">
 				<p>Here's an animal:</p>
 				<p id="animal-name"></p>
 			</div>
-			<div class="text-display-2">
-				<div id="test" class="box">Swipe me</div>
+			<div class="text-display">
+				<div id="swipe-me" class="box">Swipe me</div>
 			</div>
 
 		</div>
@@ -189,8 +193,7 @@
 
 			displayAnimal();
 
-
-			$("#test").swipe( {
+			$("#swipe-me").swipe( {
 				//Generic swipe handler for all directions
 				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 					$(this).text("You swiped " + direction );  
