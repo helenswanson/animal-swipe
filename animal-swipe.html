@@ -10,19 +10,24 @@
 				height: 100%
 				width: 100%;
 			}
+			.content {
+				width: 100%;
+			}
 			.text-display {
 				text-align: center;
 				font-size: 32px;
+				width: ;
 			}
 		</style>
 
 	</head>
 	<body onclick="displayAnimal()">
-		<div class="text-display">
-			<p >Here's an animal:</p>
-			<p id="animal-name"></p>
+		<div class="content">
+			<div class="text-display">
+				<p>Here's an animal:</p>
+				<p id="animal-name"></p>
+			</div>
 		</div>
-
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
@@ -167,21 +172,15 @@
 				"zebra"
 			];
 
-			// var count = 0;
-
 			function displayAnimal() {
 
-				// if(count < animalArray.length) {
-				// 	var animal = animalArray[count];
-				// 	document.getElementById('animal-name');
-				// }
+				
+
+
 
 				var randomAnimal = animalArray[Math.floor(Math.random() * animalArray.length)];
 				document.getElementById('animal-name').innerHTML = randomAnimal;
 			}
-
-			// count += 1;
-
 
 			displayAnimal();
 		</script>
