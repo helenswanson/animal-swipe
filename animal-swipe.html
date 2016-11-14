@@ -6,7 +6,7 @@
 
 		<style type="text/css">
 			body {
-				background: #B7E1CE;]
+				background: #F1F3F8;
 				height: 100%
 				width: 100%;
 			}
@@ -15,18 +15,21 @@
 			}
 			.top {
 				margin-top: 100px;
-
 			}
 			.text-display {
 				text-align: center;
 				font-size: 32px;
 			}
-			#animal-name {
-				padding-bottom: 100px;
+			#animal-click {
+				padding-bottom: 50px;
 			}
 			#swipe-me {
 				padding: 100px;
-				background: white;
+				background: #B7E1CE;
+			}
+			#animal-swipe {
+				padding: 100px;
+				background: #cab8e0;
 			}
 		</style>
 
@@ -34,11 +37,16 @@
 	<body>
 		<div class="content">
 			<div class="text-display top" onClick="displayAnimal()">
-				<p>Here's an animal:</p>
-				<p id="animal-name"></p>
+				<div id="animal-display">
+					<p>Here's an animal:</p>
+					<p id="animal-click"></p>
+				</div>
 			</div>
 			<div class="text-display">
 				<div id="swipe-me" class="box">Swipe me</div>
+			</div>
+			<div class="text-display">
+				<div id="animal-swipe" class="box">Swipe me</div>
 			</div>
 
 		</div>
@@ -188,7 +196,7 @@
 
 			function displayAnimal() {
 				var randomAnimal = animalArray[Math.floor(Math.random() * animalArray.length)];
-				document.getElementById('animal-name').innerHTML = randomAnimal;
+				document.getElementById('animal-click').innerHTML = randomAnimal;
 			}
 
 			displayAnimal();
